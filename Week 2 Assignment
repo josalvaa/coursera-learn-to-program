@@ -87,7 +87,8 @@ def get_hours(time):
     return int(y)
 def get_seconds(time):
     """(int) -> int
-    Return the number of seconds that have
+   
+   Return the number of seconds that have
     elapsed since midnight as seen on a clock.
     >>> get_seconds(3800)
     20
@@ -99,8 +100,10 @@ def get_seconds(time):
 
 def time_to_utc(utc_offset, time):
     """ (number, float) -> float
-    Return time at UTC+0, where utc_offset is the number of hours away from
-    UTC+0.
+   
+   Return time at UTC+0, where utc_offset is the number of hours away from
+   
+   UTC+0.
     >>> time_to_utc(+0, 12.0)
     12.0
     >>> time_to_utc(+1, 12.0)
@@ -115,11 +118,13 @@ def time_to_utc(utc_offset, time):
     0.0
     """
     time_2 = (time -(utc_offset))
+    
     return (to_24_hour_clock(time_2))
 
 def time_from_utc(utc_offset, time):
     """ (number, float) -> float
-    Return UTC time in time zone utc_offset.
+   
+   Return UTC time in time zone utc_offset.
     >>> time_from_utc(+0, 12.0)
     12.0
     >>> time_from_utc(+1, 12.0)
@@ -138,4 +143,5 @@ def time_from_utc(utc_offset, time):
     0.0
     """
     time_2 = (time +(utc_offset))
-    return (to_24_hour_clock(time_2))
+   
+   return (to_24_hour_clock(time_2))
